@@ -10,3 +10,6 @@ All growth actions must be manual, transparent, relevant, and non-spammy.
 | 2026-04-24 | GitHub | Added international README/docs | https://github.com/xiwuqi/scopediff | CI passed | Use localized summaries only after local review |
 | 2026-04-24 | GitHub | Applied repo metadata | https://github.com/xiwuqi/scopediff | Description, homepage, and topics set | Await approval before creating issues/discussions |
 | 2026-04-24 | GitHub | Updated README for post-release quick start | https://github.com/xiwuqi/scopediff | `npx scopediff@latest` commands documented | Await approval before external launch |
+| 2026-04-24 | GitHub Issues | Created 5 initial issues | https://github.com/xiwuqi/scopediff/issues | Issues #1-#5 opened with existing labels | Watch for real contributor feedback |
+| 2026-04-24 | GitHub Discussions | Enabled Discussions and created welcome thread | https://github.com/xiwuqi/scopediff/discussions/6 | Welcome discussion created in General | Invite false-positive/config-shape feedback only where relevant |
+| 2026-04-24 | Launch prep | Prepared manual external publish queue | docs/launch/manual-publish-queue-v0.1.0.md | No off-GitHub posts published | Await per-platform final publish confirmation |
