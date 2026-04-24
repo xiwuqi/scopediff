@@ -1,94 +1,88 @@
 # X/Twitter Thread With Images: v0.1.0
 
-Status: prepared only. Do not publish without final human confirmation.
+Status: published on 2026-04-24 after final human confirmation.
 
-Thread structure: problem -> demo -> safety boundary -> links.
+Published thread:
+
+- https://x.com/HCongqi/status/2047615200237334662
+- https://x.com/HCongqi/status/2047615202074448320
+- https://x.com/HCongqi/status/2047615203513090145
+- https://x.com/HCongqi/status/2047615204809179440
+
+Thread structure: problem -> review surface -> safety boundary -> links.
 
 ## Tweet 1
 
-Recommended image: `docs/demo/assets/social-preview.png`
+Recommended images:
+
+- `docs/demo/assets/social-preview.png`
+- `docs/demo/assets/scopediff-diff-report.png`
+- `docs/demo/assets/github-step-summary-mock.png`
+- `docs/demo/assets/quick-start.png`
 
 ```text
-AI agent config is becoming part of the code review surface.
+Built ScopeDiff because AI PRs now change more than code.
 
-A PR can now change MCP servers, agent instructions, package lifecycle scripts, and GitHub Actions permissions.
+They can add MCP servers, token env vars, unpinned commands, or wider GitHub Actions permissions.
 
-I built ScopeDiff to make those changes easier to review before merge.
+ScopeDiff turns those capability changes into a review report before merge.
 ```
 
 Alt text:
 
 ```text
 ScopeDiff social preview showing the tagline: Review AI agent permissions before merge.
+
+Terminal screenshot of ScopeDiff reporting new MCP and GitHub Actions permission findings.
+
+GitHub Step Summary layout mock showing a ScopeDiff report with a high-risk finding.
+
+ScopeDiff quick start image showing npx commands for scan, diff, and CI mode.
 ```
 
 ## Tweet 2
 
-Recommended image: `docs/demo/assets/scopediff-diff-report.png`
+Recommended image: none
 
 ```text
-ScopeDiff is a local-first CLI that compares your branch to a base ref and reports review-worthy agent/tooling changes.
+It looks for changes reviewers often need to notice fast:
 
-It can flag MCP server additions, token-like env vars, unpinned npx usage, and workflow permission expansion.
-```
-
-Alt text:
-
-```text
-Terminal screenshot of ScopeDiff reporting new MCP and GitHub Actions permission findings.
+- new/changed MCP servers
+- token-like env vars
+- npx/docker/curl/bash risks
+- GitHub Actions permission expansion
+- sensitive triggers like pull_request_target
+- lifecycle scripts like postinstall
 ```
 
 ## Tweet 3
 
-Recommended image: `docs/demo/assets/quick-start.png`
+Recommended image: none
 
 ```text
-The fast path is one command:
+ScopeDiff is intentionally conservative:
 
-npx scopediff@latest diff --base main
+- local-first
+- read-only by default
+- no telemetry
+- no code upload
+- no token storage
 
-It outputs Markdown or JSON, and the CI mode writes to GitHub Step Summary by default.
-```
-
-Alt text:
-
-```text
-ScopeDiff quick start image showing npx commands for scan, diff, and CI mode.
+It is a review aid, not a complete security audit or vulnerability scanner.
 ```
 
 ## Tweet 4
 
-Recommended image: `docs/demo/assets/github-step-summary-mock.png`
+Recommended image: none
 
 ```text
-ScopeDiff is a review aid, not a full security audit, vulnerability scanner, or runtime protection layer.
+Try it:
 
-It does not execute discovered commands, upload code, read .env by default, or collect telemetry.
-```
+npx scopediff@latest scan
+npx scopediff@latest diff --base main
 
-Alt text:
-
-```text
-GitHub Step Summary layout mock showing a ScopeDiff report with a high-risk finding.
-```
-
-## Tweet 5
-
-Recommended image: none, or `docs/demo/assets/feature-overview.png`
-
-```text
-Repo: https://github.com/xiwuqi/scopediff
+GitHub: https://github.com/xiwuqi/scopediff
 npm: https://www.npmjs.com/package/scopediff
 
 False-positive feedback is very welcome.
-
-If this helps you review agent/tooling changes, a star helps others find it.
-
-#MCP #AIagents
-```
-
-Alt text if using image:
-
-```text
-ScopeDiff feature overview showing MCP changes, workflow permissions, review evidence, and local-first defaults.
 ```

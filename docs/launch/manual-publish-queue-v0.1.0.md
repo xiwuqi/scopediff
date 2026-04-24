@@ -1,12 +1,17 @@
 # Manual Publish Queue: v0.1.0
 
-Status: prepared only. No off-GitHub launch post has been published.
+Status: X/Twitter published. Remaining off-GitHub launch posts are queued and still require final human confirmation.
 
 All external posts require a final human confirmation immediately before pressing publish/submit/post.
 
 ## Queue 1: X/Twitter
 
-- Status: queued; visual draft prepared; not published.
+- Status: published on 2026-04-24 after final human confirmation.
+- Published thread:
+  - https://x.com/HCongqi/status/2047615200237334662
+  - https://x.com/HCongqi/status/2047615202074448320
+  - https://x.com/HCongqi/status/2047615203513090145
+  - https://x.com/HCongqi/status/2047615204809179440
 - Drafts:
   - `docs/launch/drafts/v0.1.0/x-launch-with-images.md`
   - `docs/launch/drafts/v0.1.0/x-thread-with-images.md`
@@ -17,11 +22,11 @@ All external posts require a final human confirmation immediately before pressin
   - `docs/demo/assets/quick-start.png`
 - Suggested timing: first off-GitHub short launch post.
 - Manual checks:
-  - Confirm the post is from the project author.
-  - Do not ask for stars as a reward or condition.
-  - Do not tag unrelated people or projects.
-  - Do not use scare language.
-  - Stop before clicking Post.
+  - Confirmed the post was from the project author.
+  - Did not ask for stars as a reward or condition.
+  - Did not tag unrelated people or projects.
+  - Did not use scare language.
+  - Final publish was manually approved before clicking Post all.
 
 ## Queue 2: LinkedIn
 
