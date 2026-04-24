@@ -1,6 +1,6 @@
 # Manual Publish Queue: v0.1.0
 
-Status: X/Twitter published. Remaining off-GitHub launch posts are queued and still require final human confirmation.
+Status: X/Twitter and LinkedIn published. Remaining off-GitHub launch posts are queued and still require final human confirmation.
 
 All external posts require a final human confirmation immediately before pressing publish/submit/post.
 
@@ -30,18 +30,21 @@ All external posts require a final human confirmation immediately before pressin
 
 ## Queue 2: LinkedIn
 
-- Status: queued; visual draft prepared; not published.
+- Status: published on 2026-04-24 after final human confirmation.
+- Published post:
+  - https://www.linkedin.com/feed/update/urn:li:ugcPost:7453392377748279296/
 - Draft: `docs/launch/drafts/v0.1.0/linkedin-launch-with-images.md`
 - Optional visuals:
   - `docs/demo/assets/social-preview.png`
-  - `docs/demo/assets/feature-overview.png`
   - `docs/demo/assets/scopediff-diff-report.png`
+  - `docs/demo/assets/github-step-summary-mock.png`
+  - `docs/demo/assets/quick-start.png`
 - Suggested timing: after or alongside X/Twitter.
 - Manual checks:
-  - Keep the tone educational and transparent.
-  - Mention ScopeDiff is a review aid, not a complete audit.
-  - Invite feedback on false positives and missing config formats.
-  - Stop before clicking Post.
+  - Confirmed the tone was educational and transparent.
+  - Mentioned ScopeDiff is a review aid, not a complete audit.
+  - Invited feedback on false positives and missing config formats.
+  - Final publish was manually approved before clicking Post.
 
 ## Queue 3: Hacker News Show HN
 

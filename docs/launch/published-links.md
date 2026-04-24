@@ -17,3 +17,4 @@ Published links are recorded only after a manual, human-approved publish action.
 | 2026-04-24 | X/Twitter         | https://x.com/HCongqi/status/2047615202074448320        | v0.1.0 visual launch thread, post 2/4.                     |
 | 2026-04-24 | X/Twitter         | https://x.com/HCongqi/status/2047615203513090145        | v0.1.0 visual launch thread, post 3/4.                     |
 | 2026-04-24 | X/Twitter         | https://x.com/HCongqi/status/2047615204809179440        | v0.1.0 visual launch thread, post 4/4.                     |
+| 2026-04-24 | LinkedIn          | https://www.linkedin.com/feed/update/urn:li:ugcPost:7453392377748279296/ | v0.1.0 visual launch post; images used: social preview, diff report, GitHub summary mock, quick start. |
