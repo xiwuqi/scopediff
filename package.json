@@ -1,0 +1,66 @@
+{
+  "name": "scopediff",
+  "version": "0.1.0",
+  "description": "AI agent permission and tooling surface diffs for pull request review.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "scopediff": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "SECURITY.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsx src/cli.ts",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm run lint && npm run test && npm run build"
+  },
+  "keywords": [
+    "ai-agent",
+    "mcp",
+    "github-actions",
+    "security",
+    "cli",
+    "permissions",
+    "audit"
+  ],
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiwuqi/scopediff.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xiwuqi/scopediff/issues"
+  },
+  "homepage": "https://github.com/xiwuqi/scopediff#readme",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "execa": "^9.6.0",
+    "fast-glob": "^3.3.3",
+    "yaml": "^2.7.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@types/node": "^22.10.7",
+    "eslint": "^9.18.0",
+    "prettier": "^3.4.2",
+    "tsup": "^8.3.6",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.20.0",
+    "vitest": "^2.1.8"
+  }
+}

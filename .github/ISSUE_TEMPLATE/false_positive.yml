@@ -1,0 +1,18 @@
+name: False positive
+description: Report a finding that ScopeDiff should handle more carefully.
+title: "[False positive]: "
+labels: ["false-positive"]
+body:
+  - type: textarea
+    id: finding
+    attributes:
+      label: Finding
+      description: Paste the finding without secrets or private data.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Why is this a false positive?
+    validations:
+      required: true

@@ -1,0 +1,32 @@
+name: ScopeDiff
+description: Review AI agent and tooling permission changes before merge.
+inputs:
+  base:
+    description: Base git ref to compare against.
+    required: false
+    default: ""
+  fail-on:
+    description: "Severity threshold for failing the job: none, low, medium, high, or critical."
+    required: false
+    default: high
+  comment-pr:
+    description: Reserved for a future opt-in PR comment feature. Must remain false in this release.
+    required: false
+    default: "false"
+runs:
+  using: composite
+  steps:
+    - name: Validate comment-pr
+      if: ${{ inputs.comment-pr != 'false' }}
+      shell: bash
+      run: |
+        echo "comment-pr is not implemented in this release. ScopeDiff only writes Step Summary by default." >&2
+        exit 2
+    - name: Run ScopeDiff
+      shell: bash
+      run: |
+        if [ -n "${{ inputs.base }}" ]; then
+          npx scopediff ci --base "${{ inputs.base }}" --fail-on "${{ inputs.fail-on }}"
+        else
+          npx scopediff ci --fail-on "${{ inputs.fail-on }}"
+        fi
