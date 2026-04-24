@@ -1,6 +1,6 @@
 # Manual Publish Queue: v0.1.0
 
-Status: X/Twitter and LinkedIn published. Remaining off-GitHub launch posts are queued and still require final human confirmation.
+Status: X/Twitter and LinkedIn published. Reddit r/opensource was submitted after final human confirmation, then removed by AutoModerator because the account did not meet the subreddit's 1-year age requirement. Remaining off-GitHub launch posts are queued and still require final human confirmation.
 
 All external posts require a final human confirmation immediately before pressing publish/submit/post.
 
@@ -59,6 +59,15 @@ All external posts require a final human confirmation immediately before pressin
 
 ## Queue 4: Reddit
 
+- Status: r/opensource submitted on 2026-04-24 after final human confirmation, then AutoModerator-removed.
+- Link:
+  - https://www.reddit.com/r/opensource/comments/1sucp99/i_built_scopediff_a_local_cli_for_reviewing_ai/
+- Removal reason shown by AutoModerator:
+  - Accounts must be at least 1 year old to post in r/opensource.
+- Follow-up:
+  - Do not crosspost or repost the same content.
+  - Do not message moderators unless the user explicitly chooses to ask a neutral rules question.
+  - Prefer channels where the account already meets participation requirements.
 - Drafts:
   - `docs/launch/drafts/v0.1.0/reddit-opensource.md`
   - `docs/launch/drafts/v0.1.0/reddit-github.md`
