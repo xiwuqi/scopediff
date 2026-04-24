@@ -1,5 +1,9 @@
 # ScopeDiff
 
+[![npm version](https://img.shields.io/npm/v/scopediff.svg)](https://www.npmjs.com/package/scopediff)
+[![CI](https://github.com/xiwuqi/scopediff/actions/workflows/ci.yml/badge.svg)](https://github.com/xiwuqi/scopediff/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 AI agent permission and tooling surface diffs for pull request review.
 
 > This PR gives your AI agent new powers. Review them before merge.
@@ -25,7 +29,7 @@ ScopeDiff makes those boundary changes visible for human review.
 ## Quick Install
 
 ```bash
-npx scopediff scan
+npx scopediff@latest scan
 ```
 
 Install in a project:
@@ -47,25 +51,25 @@ node dist/cli.js scan
 Scan the current repo:
 
 ```bash
-npx scopediff scan
+npx scopediff@latest scan
 ```
 
 Compare your branch with `main`:
 
 ```bash
-npx scopediff diff --base main
+npx scopediff@latest diff --base main
 ```
 
 Generate Markdown:
 
 ```bash
-npx scopediff report --format markdown
+npx scopediff@latest report --format markdown
 ```
 
 Run in CI and fail on high-risk findings:
 
 ```bash
-npx scopediff ci --fail-on high
+npx scopediff@latest ci --fail-on high
 ```
 
 ## Example Report
@@ -103,7 +107,7 @@ Review notes:
 
 ## GitHub Actions
 
-After npm publication, you can run the CLI in GitHub Actions:
+Use the released GitHub Action:
 
 ```yaml
 name: ScopeDiff
@@ -127,12 +131,22 @@ jobs:
           node-version: 20
 
       - name: Run ScopeDiff
-        run: npx scopediff@0.1.0 ci --base origin/${{ github.base_ref }} --fail-on high
+        uses: xiwuqi/scopediff@v0.1.0
+        with:
+          base: origin/${{ github.base_ref }}
+          fail-on: high
 ```
 
 By default, ScopeDiff writes to the GitHub Step Summary and does not comment on pull requests.
 
-If you use the repository action after a GitHub release, pin the action tag, for example `xiwuqi/scopediff@v0.1.0`. Do not use an unpinned branch such as `main` for long-lived CI.
+You can also run the npm package directly:
+
+```yaml
+- name: Run ScopeDiff
+  run: npx scopediff@0.1.0 ci --base origin/${{ github.base_ref }} --fail-on high
+```
+
+Pin the action tag or npm version for long-lived CI. Do not use an unpinned branch such as `main`.
 
 ## Good Fit
 
