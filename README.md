@@ -4,6 +4,8 @@ AI agent permission and tooling surface diffs for pull request review.
 
 > This PR gives your AI agent new powers. Review them before merge.
 
+[Translations](#translations): [简体中文](docs/i18n/README.zh-CN.md) · [日本語](docs/i18n/README.ja-JP.md) · [Español](docs/i18n/README.es.md) · [Français](docs/i18n/README.fr.md) · [Português (Brasil)](docs/i18n/README.pt-BR.md) · [Deutsch](docs/i18n/README.de.md)
+
 ScopeDiff helps maintainers spot changes to MCP servers, agent instructions, GitHub Actions permissions, package lifecycle scripts, Docker settings, and other files that can change what AI agents or automation are able to do.
 
 It is a review aid, not a complete security audit, vulnerability scanner, or runtime protection system.
@@ -20,9 +22,19 @@ AI agent setup is starting to live inside repositories: MCP servers, `AGENTS.md`
 
 ScopeDiff makes those boundary changes visible for human review.
 
-## Run From Source
+## Quick Install
 
-Before the first npm release:
+```bash
+npx scopediff scan
+```
+
+Install in a project:
+
+```bash
+npm install -D scopediff
+```
+
+Run from source:
 
 ```bash
 npm install
@@ -30,42 +42,30 @@ npm run build
 node dist/cli.js scan
 ```
 
-After npm publication:
-
-```bash
-npx scopediff scan
-```
-
-Install in a project after npm publication:
-
-```bash
-npm install -D scopediff
-```
-
 ## 30-Second Quick Start
 
 Scan the current repo:
 
 ```bash
-node dist/cli.js scan
+npx scopediff scan
 ```
 
 Compare your branch with `main`:
 
 ```bash
-node dist/cli.js diff --base main
+npx scopediff diff --base main
 ```
 
 Generate Markdown:
 
 ```bash
-node dist/cli.js report --format markdown
+npx scopediff report --format markdown
 ```
 
 Run in CI and fail on high-risk findings:
 
 ```bash
-node dist/cli.js ci --fail-on high
+npx scopediff ci --fail-on high
 ```
 
 ## Example Report
@@ -171,6 +171,17 @@ ScopeDiff is local-first:
 - [Architecture](docs/architecture.md)
 - [MVP acceptance](docs/mvp-acceptance.md)
 - [Test plan](docs/test-plan.md)
+
+## Translations
+
+English is the source of truth for behavior, limitations, and release status. Localized README summaries are provided for international discoverability and should stay conservative:
+
+- [简体中文](docs/i18n/README.zh-CN.md)
+- [日本語](docs/i18n/README.ja-JP.md)
+- [Español](docs/i18n/README.es.md)
+- [Français](docs/i18n/README.fr.md)
+- [Português (Brasil)](docs/i18n/README.pt-BR.md)
+- [Deutsch](docs/i18n/README.de.md)
 
 ## Roadmap
 
