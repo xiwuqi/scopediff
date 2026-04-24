@@ -14,6 +14,12 @@ It is a review aid, not a complete security audit, vulnerability scanner, or run
 - Run locally or in CI without uploading code.
 - Get PR-ready Markdown and JSON reports with evidence and suggested review steps.
 
+## Why This Exists
+
+AI agent setup is starting to live inside repositories: MCP servers, `AGENTS.md`, Cursor rules, Claude skills, GitHub Actions permissions, and package lifecycle scripts. A pull request can now change more than application code; it can also change what tools an agent can run, which tokens it expects, and which automation paths can publish or deploy.
+
+ScopeDiff makes those boundary changes visible for human review.
+
 ## Run From Source
 
 Before the first npm release:
@@ -97,6 +103,8 @@ Review notes:
 
 ## GitHub Actions
 
+After npm publication, you can run the CLI in GitHub Actions:
+
 ```yaml
 name: ScopeDiff
 
@@ -119,10 +127,12 @@ jobs:
           node-version: 20
 
       - name: Run ScopeDiff
-        run: npx scopediff ci --base origin/${{ github.base_ref }} --fail-on high
+        run: npx scopediff@0.1.0 ci --base origin/${{ github.base_ref }} --fail-on high
 ```
 
 By default, ScopeDiff writes to the GitHub Step Summary and does not comment on pull requests.
+
+If you use the repository action after a GitHub release, pin the action tag, for example `xiwuqi/scopediff@v0.1.0`. Do not use an unpinned branch such as `main` for long-lived CI.
 
 ## Good Fit
 
@@ -131,7 +141,7 @@ By default, ScopeDiff writes to the GitHub Step Summary and does not comment on 
 - Open source maintainers reviewing automation changes.
 - Teams adding AI coding agents to existing workflows.
 
-## Not a Fit
+## What It Is Not
 
 - Full malware detection.
 - Runtime blocking or sandbox enforcement.
