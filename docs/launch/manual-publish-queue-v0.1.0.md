@@ -6,10 +6,15 @@ All external posts require a final human confirmation immediately before pressin
 
 ## Queue 1: X/Twitter
 
-- Draft: `docs/launch/drafts/v0.1.0/x-launch-post.md`
+- Status: queued; visual draft prepared; not published.
+- Drafts:
+  - `docs/launch/drafts/v0.1.0/x-launch-with-images.md`
+  - `docs/launch/drafts/v0.1.0/x-thread-with-images.md`
 - Optional visuals:
   - `docs/demo/assets/social-preview.png`
-  - `docs/demo/assets/feature-overview.png`
+  - `docs/demo/assets/scopediff-diff-report.png`
+  - `docs/demo/assets/github-step-summary-mock.png`
+  - `docs/demo/assets/quick-start.png`
 - Suggested timing: first off-GitHub short launch post.
 - Manual checks:
   - Confirm the post is from the project author.
@@ -20,11 +25,11 @@ All external posts require a final human confirmation immediately before pressin
 
 ## Queue 2: LinkedIn
 
-- Draft: `docs/launch/drafts/v0.1.0/linkedin-launch-post.md`
+- Status: queued; visual draft prepared; not published.
+- Draft: `docs/launch/drafts/v0.1.0/linkedin-launch-with-images.md`
 - Optional visuals:
   - `docs/demo/assets/social-preview.png`
   - `docs/demo/assets/feature-overview.png`
-  - `docs/demo/assets/quick-start.png`
   - `docs/demo/assets/scopediff-diff-report.png`
 - Suggested timing: after or alongside X/Twitter.
 - Manual checks:
