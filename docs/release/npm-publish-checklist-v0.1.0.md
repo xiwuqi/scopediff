@@ -25,7 +25,7 @@ Confirm:
 Requires manual approval:
 
 ```bash
-npm whoami
+npm whoami --registry https://registry.npmjs.org/
 ```
 
 If not logged in, stop and ask the user to handle npm login and 2FA.
@@ -35,15 +35,15 @@ If not logged in, stop and ask the user to handle npm login and 2FA.
 Requires manual approval:
 
 ```bash
-npm publish --access public
+npm publish --access public --registry https://registry.npmjs.org/
 ```
 
 ## Post-Publish Verification
 
 ```bash
-npm view scopediff name version description --json
-npx scopediff@latest --help
-npx scopediff@latest scan --format markdown
+npm view scopediff name version description --json --registry https://registry.npmjs.org/
+npx --registry https://registry.npmjs.org/ scopediff@latest --help
+npx --registry https://registry.npmjs.org/ scopediff@latest scan --format markdown
 ```
 
 ## If Package Name Is Unavailable

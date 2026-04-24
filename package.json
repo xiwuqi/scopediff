@@ -39,7 +39,7 @@
   "author": "xiwuqi",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xiwuqi/scopediff.git"
+    "url": "git+https://github.com/xiwuqi/scopediff.git"
   },
   "bugs": {
     "url": "https://github.com/xiwuqi/scopediff/issues"

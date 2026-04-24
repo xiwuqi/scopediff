@@ -36,3 +36,19 @@ If `scopediff` becomes unavailable before publish:
 - Other fallback candidates: `agentpermdiff`, `agentscopediff`, `mcpdiff`
 
 No `npm login` or `npm publish` was run during this phase.
+
+## Registry Note
+
+On 2026-04-24, `npm config get registry` returned:
+
+```text
+https://registry.npmmirror.com/
+```
+
+Official publish commands must use the npm registry explicitly:
+
+```bash
+npm login --registry https://registry.npmjs.org/
+npm publish --access public --registry https://registry.npmjs.org/
+npm view scopediff name version description --json --registry https://registry.npmjs.org/
+```
