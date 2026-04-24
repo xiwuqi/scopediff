@@ -49,12 +49,14 @@ All external posts require a final human confirmation immediately before pressin
 ## Queue 3: Hacker News Show HN
 
 - Draft: `docs/launch/drafts/v0.1.0/show-hn.md`
-- Suggested title: `Show HN: ScopeDiff – review AI agent permission changes before merge`
+- Suggested title: `Show HN: ScopeDiff - review AI agent permission changes before merge`
+- Status: prepared, not submitted.
 - Manual checks:
   - Read current Hacker News guidelines first: https://news.ycombinator.com/newsguidelines.html
   - Keep the title plain and non-clickbait.
   - Do not solicit upvotes or comments.
   - Do not repost if it does not get attention.
+  - Author should personally review and rewrite the post text before submitting because HN discourages generated or AI-edited comments.
   - Stop before clicking Submit.
 
 ## Queue 4: Reddit
@@ -83,6 +85,7 @@ All external posts require a final human confirmation immediately before pressin
 ## Queue 5: Dev.to
 
 - Draft: `docs/launch/drafts/v0.1.0/devto-blog.md`
+- Status: prepared, not published. DEV login is required before the editor can be filled.
 - Optional visuals:
   - `docs/demo/assets/feature-overview.png`
   - `docs/demo/assets/scopediff-diff-report.png`
