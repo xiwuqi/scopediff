@@ -6,6 +6,8 @@ AI agent 权限与工具面变更审查辅助工具。
 
 [English README](../../README.md) 是行为、限制和发布状态的准确信息来源。本页是面向中文开发者的摘要版。
 
+![ScopeDiff 功能概览](../demo/assets/feature-overview.png)
+
 ## 它解决什么问题
 
 ScopeDiff 帮助维护者在合并 PR 前看到这些变化：
@@ -19,29 +21,33 @@ ScopeDiff 帮助维护者在合并 PR 前看到这些变化：
 
 ## 快速开始
 
+![ScopeDiff 快速开始命令](../demo/assets/quick-start.png)
+
 ```bash
-npx scopediff scan
+npx scopediff@latest scan
 ```
 
 对比当前分支和 `main`：
 
 ```bash
-npx scopediff diff --base main
+npx scopediff@latest diff --base main
 ```
 
 生成 Markdown 报告：
 
 ```bash
-npx scopediff report --format markdown
+npx scopediff@latest report --format markdown
 ```
 
 CI 中按高风险失败：
 
 ```bash
-npx scopediff ci --fail-on high
+npx scopediff@latest ci --fail-on high
 ```
 
 ## 示例报告
+
+![ScopeDiff diff 报告截图](../demo/assets/scopediff-diff-report.png)
 
 ```md
 ## ScopeDiff Report

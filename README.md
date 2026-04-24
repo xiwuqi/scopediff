@@ -14,6 +14,8 @@ ScopeDiff helps maintainers spot changes to MCP servers, agent instructions, Git
 
 It is a review aid, not a complete security audit, vulnerability scanner, or runtime protection system.
 
+![ScopeDiff feature overview showing MCP, workflow, review evidence, and local-first checks](docs/demo/assets/feature-overview.png)
+
 ## Why ScopeDiff
 
 - See agent/tooling permission changes before merge.
@@ -48,6 +50,8 @@ node dist/cli.js scan
 
 ## 30-Second Quick Start
 
+![ScopeDiff quick start commands](docs/demo/assets/quick-start.png)
+
 Scan the current repo:
 
 ```bash
@@ -73,6 +77,10 @@ npx scopediff@latest ci --fail-on high
 ```
 
 ## Example Report
+
+![ScopeDiff terminal demo showing a high-risk diff report](docs/demo/assets/scopediff-diff-report.png)
+
+This screenshot is generated from real ScopeDiff CLI output against a temporary demo repository. The full demo report is available in [docs/demo/scopediff-report.md](docs/demo/scopediff-report.md).
 
 ```md
 ## ScopeDiff Report
@@ -138,6 +146,10 @@ jobs:
 ```
 
 By default, ScopeDiff writes to the GitHub Step Summary and does not comment on pull requests.
+
+![ScopeDiff GitHub Step Summary layout mock](docs/demo/assets/github-step-summary-mock.png)
+
+The image above is a layout mock based on ScopeDiff Markdown output. Capture a real Step Summary from your repository after adding the workflow.
 
 You can also run the npm package directly:
 

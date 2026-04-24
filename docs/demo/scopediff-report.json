@@ -1,16 +1,36 @@
 {
-  "repo": "repo",
+  "repo": "scopediff-demo-iLBqaN",
   "baseRef": "main",
   "headRef": "HEAD",
-  "generatedAt": "2026-04-24T05:02:47.708Z",
+  "generatedAt": "2026-04-24T07:16:57.863Z",
   "findings": [
+    {
+      "title": "Workflow secret usage added",
+      "severity": "critical",
+      "category": "workflow",
+      "file": ".github/workflows/ci.yml",
+      "lineStart": 14,
+      "lineEnd": 14,
+      "evidence": "NPM_TOKEN: ${{ secrets.NPM_TOKEN }}",
+      "previousValue": null,
+      "currentValue": "NPM_TOKEN: ${{ secrets.NPM_TOKEN }}",
+      "whyItMatters": "Secrets can publish, deploy, or access external systems.",
+      "suggestedReview": "Confirm event triggers and environment protections.",
+      "confidence": 0.9,
+      "isNewCapability": true,
+      "isPermissionExpansion": true,
+      "relatedFiles": [],
+      "docsUrl": "https://github.com/xiwuqi/scopediff/blob/main/docs/risk-model.md#r014",
+      "ruleId": "R014",
+      "id": "F001"
+    },
     {
       "title": "Sensitive workflow trigger added: pull_request_target",
       "severity": "critical",
       "category": "workflow",
       "file": ".github/workflows/ci.yml",
-      "lineStart": 1,
-      "lineEnd": 1,
+      "lineStart": 3,
+      "lineEnd": 3,
       "evidence": "on: pull_request_target",
       "previousValue": null,
       "currentValue": "pull_request_target",
@@ -22,7 +42,7 @@
       "relatedFiles": [],
       "docsUrl": "https://github.com/xiwuqi/scopediff/blob/main/docs/risk-model.md#r013",
       "ruleId": "R013",
-      "id": "F001"
+      "id": "F002"
     },
     {
       "title": "Credential-like env var referenced: GITHUB_TOKEN",
@@ -42,7 +62,7 @@
       "relatedFiles": [],
       "docsUrl": "https://github.com/xiwuqi/scopediff/blob/main/docs/risk-model.md#r005",
       "ruleId": "R005",
-      "id": "F002"
+      "id": "F003"
     },
     {
       "title": "MCP server added: github",
@@ -66,7 +86,7 @@
       "relatedFiles": [],
       "docsUrl": "https://github.com/xiwuqi/scopediff/blob/main/docs/risk-model.md#r001",
       "ruleId": "R001",
-      "id": "F003"
+      "id": "F004"
     },
     {
       "title": "Unpinned remote package for MCP server: github",
@@ -86,15 +106,35 @@
       "relatedFiles": [],
       "docsUrl": "https://github.com/xiwuqi/scopediff/blob/main/docs/risk-model.md#r007",
       "ruleId": "R007",
-      "id": "F004"
+      "id": "F005"
+    },
+    {
+      "title": "Release or deployment operation added",
+      "severity": "high",
+      "category": "workflow",
+      "file": ".github/workflows/ci.yml",
+      "lineStart": 12,
+      "lineEnd": 12,
+      "evidence": "- run: npm publish",
+      "previousValue": null,
+      "currentValue": "- run: npm publish",
+      "whyItMatters": "Release operations can alter external systems.",
+      "suggestedReview": "Check credentials, triggers, environments, and approvals.",
+      "confidence": 0.82,
+      "isNewCapability": true,
+      "isPermissionExpansion": true,
+      "relatedFiles": [],
+      "docsUrl": "https://github.com/xiwuqi/scopediff/blob/main/docs/risk-model.md#r017",
+      "ruleId": "R017",
+      "id": "F006"
     },
     {
       "title": "Workflow permission expanded: contents write",
       "severity": "high",
       "category": "workflow",
       "file": ".github/workflows/ci.yml",
-      "lineStart": 3,
-      "lineEnd": 3,
+      "lineStart": 5,
+      "lineEnd": 5,
       "evidence": "contents: write",
       "previousValue": "read",
       "currentValue": "write",
@@ -106,7 +146,47 @@
       "relatedFiles": [],
       "docsUrl": "https://github.com/xiwuqi/scopediff/blob/main/docs/risk-model.md#r012",
       "ruleId": "R012",
-      "id": "F005"
+      "id": "F007"
+    },
+    {
+      "title": "Workflow permission expanded: pull-requests write",
+      "severity": "high",
+      "category": "workflow",
+      "file": ".github/workflows/ci.yml",
+      "lineStart": 6,
+      "lineEnd": 6,
+      "evidence": "pull-requests: write",
+      "previousValue": "none",
+      "currentValue": "write",
+      "whyItMatters": "Workflow tokens may gain write access.",
+      "suggestedReview": "Prefer job-level permissions and least privilege.",
+      "confidence": 0.95,
+      "isNewCapability": false,
+      "isPermissionExpansion": true,
+      "relatedFiles": [],
+      "docsUrl": "https://github.com/xiwuqi/scopediff/blob/main/docs/risk-model.md#r012",
+      "ruleId": "R012",
+      "id": "F008"
+    },
+    {
+      "title": "Release or deployment operation added",
+      "severity": "high",
+      "category": "workflow",
+      "file": ".github/workflows/ci.yml",
+      "lineStart": 8,
+      "lineEnd": 8,
+      "evidence": "release:",
+      "previousValue": null,
+      "currentValue": "release:",
+      "whyItMatters": "Release operations can alter external systems.",
+      "suggestedReview": "Check credentials, triggers, environments, and approvals.",
+      "confidence": 0.82,
+      "isNewCapability": true,
+      "isPermissionExpansion": true,
+      "relatedFiles": [],
+      "docsUrl": "https://github.com/xiwuqi/scopediff/blob/main/docs/risk-model.md#r017",
+      "ruleId": "R017",
+      "id": "F009"
     },
     {
       "title": "Executable command in MCP server: github",
@@ -126,7 +206,27 @@
       "relatedFiles": [],
       "docsUrl": "https://github.com/xiwuqi/scopediff/blob/main/docs/risk-model.md#r006",
       "ruleId": "R006",
-      "id": "F006"
+      "id": "F010"
+    },
+    {
+      "title": "High-privilege AGENTS.md instruction added",
+      "severity": "medium",
+      "category": "instruction",
+      "file": "AGENTS.md",
+      "lineStart": 1,
+      "lineEnd": 1,
+      "evidence": "Agent may read repository files, run shell commands, and push release changes after approval.",
+      "previousValue": null,
+      "currentValue": "Agent may read repository files, run shell commands, and push release changes after approval.",
+      "whyItMatters": "Agent instructions can influence reads, writes, shell use, and publishing.",
+      "suggestedReview": "Confirm the instruction is intended and bounded.",
+      "confidence": 0.72,
+      "isNewCapability": true,
+      "isPermissionExpansion": true,
+      "relatedFiles": [],
+      "docsUrl": "https://github.com/xiwuqi/scopediff/blob/main/docs/risk-model.md#r010",
+      "ruleId": "R010",
+      "id": "F011"
     },
     {
       "title": "MCP env variable added: GITHUB_TOKEN",
@@ -146,25 +246,26 @@
       "relatedFiles": [],
       "docsUrl": "https://github.com/xiwuqi/scopediff/blob/main/docs/risk-model.md#r004",
       "ruleId": "R004",
-      "id": "F007"
+      "id": "F012"
     }
   ],
   "skippedFiles": [],
   "errors": [],
-  "summary": "ScopeDiff found 7 review-worthy agent/tooling changes. Highest risk: critical.",
+  "summary": "ScopeDiff found 12 review-worthy agent/tooling changes. Highest risk: critical.",
   "riskLevel": "critical",
   "countsBySeverity": {
     "low": 0,
-    "medium": 2,
-    "high": 4,
-    "critical": 1
+    "medium": 3,
+    "high": 7,
+    "critical": 2
   },
   "countsByCategory": {
-    "workflow": 2,
+    "workflow": 6,
     "credential": 1,
     "mcp": 2,
     "package": 1,
-    "execution": 1
+    "execution": 1,
+    "instruction": 1
   },
   "nextReviewActions": [
     "Check workflow triggers, token permissions, and secret usage before merge.",

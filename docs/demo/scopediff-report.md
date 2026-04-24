@@ -1,30 +1,58 @@
 # ScopeDiff Report
 
-Repo: repo
+Repo: scopediff-demo-iLBqaN
 Base: main
 Head: HEAD
-Generated: 2026-04-24T05:02:47.453Z
+Generated: 2026-04-24T07:16:57.607Z
 
 ## Summary
 
 Risk: Critical
 
-ScopeDiff found 7 review-worthy agent/tooling changes. Highest risk: critical.
+ScopeDiff found 12 review-worthy agent/tooling changes. Highest risk: critical.
 
 Counts:
 
-- Critical: 1
-- High: 4
-- Medium: 2
+- Critical: 2
+- High: 7
+- Medium: 3
 - Low: 0
 
 ## Findings
 
-### F001 - Sensitive workflow trigger added: pull_request_target
+### F001 - Workflow secret usage added
 
 Severity: Critical
 Category: workflow
-File: `.github/workflows/ci.yml:1`
+File: `.github/workflows/ci.yml:14`
+Rule: R014
+Confidence: 0.90
+
+Evidence:
+
+```text
+NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+```
+
+Current:
+
+```json
+"NPM_TOKEN: ${{ secrets.NPM_TOKEN }}"
+```
+
+Why it matters:
+
+Secrets can publish, deploy, or access external systems.
+
+Suggested review:
+
+Confirm event triggers and environment protections.
+
+### F002 - Sensitive workflow trigger added: pull_request_target
+
+Severity: Critical
+Category: workflow
+File: `.github/workflows/ci.yml:3`
 Rule: R013
 Confidence: 0.95
 
@@ -48,7 +76,7 @@ Suggested review:
 
 Review fork behavior, token permissions, and secret exposure.
 
-### F002 - Credential-like env var referenced: GITHUB_TOKEN
+### F003 - Credential-like env var referenced: GITHUB_TOKEN
 
 Severity: High
 Category: credential
@@ -76,7 +104,7 @@ Suggested review:
 
 Check token scope and avoid real values in the repository.
 
-### F003 - MCP server added: github
+### F004 - MCP server added: github
 
 Severity: High
 Category: mcp
@@ -108,7 +136,7 @@ Suggested review:
 
 Confirm the server is needed, trusted, and least-privileged.
 
-### F004 - Unpinned remote package for MCP server: github
+### F005 - Unpinned remote package for MCP server: github
 
 Severity: High
 Category: package
@@ -136,11 +164,39 @@ Suggested review:
 
 Pin package versions or image digests where practical.
 
-### F005 - Workflow permission expanded: contents write
+### F006 - Release or deployment operation added
 
 Severity: High
 Category: workflow
-File: `.github/workflows/ci.yml:3`
+File: `.github/workflows/ci.yml:12`
+Rule: R017
+Confidence: 0.82
+
+Evidence:
+
+```text
+- run: npm publish
+```
+
+Current:
+
+```json
+"- run: npm publish"
+```
+
+Why it matters:
+
+Release operations can alter external systems.
+
+Suggested review:
+
+Check credentials, triggers, environments, and approvals.
+
+### F007 - Workflow permission expanded: contents write
+
+Severity: High
+Category: workflow
+File: `.github/workflows/ci.yml:5`
 Rule: R012
 Confidence: 0.95
 
@@ -170,7 +226,69 @@ Suggested review:
 
 Prefer job-level permissions and least privilege.
 
-### F006 - Executable command in MCP server: github
+### F008 - Workflow permission expanded: pull-requests write
+
+Severity: High
+Category: workflow
+File: `.github/workflows/ci.yml:6`
+Rule: R012
+Confidence: 0.95
+
+Evidence:
+
+```text
+pull-requests: write
+```
+
+Previous:
+
+```json
+"none"
+```
+
+Current:
+
+```json
+"write"
+```
+
+Why it matters:
+
+Workflow tokens may gain write access.
+
+Suggested review:
+
+Prefer job-level permissions and least privilege.
+
+### F009 - Release or deployment operation added
+
+Severity: High
+Category: workflow
+File: `.github/workflows/ci.yml:8`
+Rule: R017
+Confidence: 0.82
+
+Evidence:
+
+```text
+release:
+```
+
+Current:
+
+```json
+"release:"
+```
+
+Why it matters:
+
+Release operations can alter external systems.
+
+Suggested review:
+
+Check credentials, triggers, environments, and approvals.
+
+### F010 - Executable command in MCP server: github
 
 Severity: Medium
 Category: execution
@@ -198,7 +316,35 @@ Suggested review:
 
 Review command source and arguments.
 
-### F007 - MCP env variable added: GITHUB_TOKEN
+### F011 - High-privilege AGENTS.md instruction added
+
+Severity: Medium
+Category: instruction
+File: `AGENTS.md:1`
+Rule: R010
+Confidence: 0.72
+
+Evidence:
+
+```text
+Agent may read repository files, run shell commands, and push release changes after approval.
+```
+
+Current:
+
+```json
+"Agent may read repository files, run shell commands, and push release changes after approval."
+```
+
+Why it matters:
+
+Agent instructions can influence reads, writes, shell use, and publishing.
+
+Suggested review:
+
+Confirm the instruction is intended and bounded.
+
+### F012 - MCP env variable added: GITHUB_TOKEN
 
 Severity: Medium
 Category: mcp

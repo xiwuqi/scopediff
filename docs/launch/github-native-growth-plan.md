@@ -12,13 +12,13 @@ They are useful because they invite concrete improvements without pretending the
 
 ## Recommended Issues
 
-| Order | Draft | Purpose | Recommended labels | Good first issue | Help wanted |
-| ----- | ----- | ------- | ------------------ | ---------------- | ----------- |
-| 1 | `docs/launch/issue-drafts/02-readme-example-report.md` | Improve first-time user clarity. | `good first issue`, `docs` | Yes | No |
-| 2 | `docs/launch/issue-drafts/01-mcp-config-shape.md` | Add another sanitized MCP fixture shape. | `good first issue`, `tests`, `mcp` | Yes | No |
-| 3 | `docs/launch/issue-drafts/04-common-false-positives.md` | Document expected false positives and review guidance. | `help wanted`, `docs`, `false-positive` | Maybe | Yes |
-| 4 | `docs/launch/issue-drafts/03-actions-permission-cases.md` | Expand workflow permission expansion test coverage. | `help wanted`, `tests`, `github-actions` | No | Yes |
-| 5 | `docs/launch/issue-drafts/05-sarif-output.md` | Track a non-MVP output format for future planning. | `roadmap`, `help wanted`, `output-format` | No | Yes |
+| Order | Draft                                                     | Purpose                                                | Recommended labels                        | Good first issue | Help wanted |
+| ----- | --------------------------------------------------------- | ------------------------------------------------------ | ----------------------------------------- | ---------------- | ----------- |
+| 1     | `docs/launch/issue-drafts/02-readme-example-report.md`    | Improve first-time user clarity.                       | `good first issue`, `docs`                | Yes              | No          |
+| 2     | `docs/launch/issue-drafts/01-mcp-config-shape.md`         | Add another sanitized MCP fixture shape.               | `good first issue`, `tests`, `mcp`        | Yes              | No          |
+| 3     | `docs/launch/issue-drafts/04-common-false-positives.md`   | Document expected false positives and review guidance. | `help wanted`, `docs`, `false-positive`   | Maybe            | Yes         |
+| 4     | `docs/launch/issue-drafts/03-actions-permission-cases.md` | Expand workflow permission expansion test coverage.    | `help wanted`, `tests`, `github-actions`  | No               | Yes         |
+| 5     | `docs/launch/issue-drafts/05-sarif-output.md`             | Track a non-MVP output format for future planning.     | `roadmap`, `help wanted`, `output-format` | No               | Yes         |
 
 ## Creation Order
 

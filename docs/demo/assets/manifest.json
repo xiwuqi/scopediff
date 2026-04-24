@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-04-24T07:16:58.838Z",
+  "scenario": "PR adds GitHub MCP server, token env, unpinned npx package, and workflow permission expansion.",
+  "assets": [
+    "docs/demo/assets/scopediff-diff-report.svg",
+    "docs/demo/assets/scopediff-diff-report.png",
+    "docs/demo/assets/scopediff-explain.svg",
+    "docs/demo/assets/scopediff-explain.png",
+    "docs/demo/assets/social-preview.svg",
+    "docs/demo/assets/social-preview.png",
+    "docs/demo/assets/feature-overview.svg",
+    "docs/demo/assets/feature-overview.png",
+    "docs/demo/assets/quick-start.svg",
+    "docs/demo/assets/quick-start.png",
+    "docs/demo/assets/github-step-summary-mock.svg",
+    "docs/demo/assets/github-step-summary-mock.png",
+    "docs/demo/scopediff-report.md",
+    "docs/demo/scopediff-report.json"
+  ],
+  "source": "Generated from real ScopeDiff CLI output against a temporary git repository."
+}

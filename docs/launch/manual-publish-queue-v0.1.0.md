@@ -7,6 +7,9 @@ All external posts require a final human confirmation immediately before pressin
 ## Queue 1: X/Twitter
 
 - Draft: `docs/launch/drafts/v0.1.0/x-launch-post.md`
+- Optional visuals:
+  - `docs/demo/assets/social-preview.png`
+  - `docs/demo/assets/feature-overview.png`
 - Suggested timing: first off-GitHub short launch post.
 - Manual checks:
   - Confirm the post is from the project author.
@@ -18,6 +21,11 @@ All external posts require a final human confirmation immediately before pressin
 ## Queue 2: LinkedIn
 
 - Draft: `docs/launch/drafts/v0.1.0/linkedin-launch-post.md`
+- Optional visuals:
+  - `docs/demo/assets/social-preview.png`
+  - `docs/demo/assets/feature-overview.png`
+  - `docs/demo/assets/quick-start.png`
+  - `docs/demo/assets/scopediff-diff-report.png`
 - Suggested timing: after or alongside X/Twitter.
 - Manual checks:
   - Keep the tone educational and transparent.
@@ -53,6 +61,10 @@ All external posts require a final human confirmation immediately before pressin
 ## Queue 5: Dev.to
 
 - Draft: `docs/launch/drafts/v0.1.0/devto-blog.md`
+- Optional visuals:
+  - `docs/demo/assets/feature-overview.png`
+  - `docs/demo/assets/scopediff-diff-report.png`
+  - `docs/demo/assets/github-step-summary-mock.png`
 - Manual checks:
   - Read DEV Community Code of Conduct first: https://dev.to/code-of-conduct
   - Keep the article educational, not promotional-only.

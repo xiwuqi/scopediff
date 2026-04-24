@@ -1,6 +1,13 @@
 # Demo Scenario
 
-This demo is based on real ScopeDiff CLI output from the v0.1.0 tarball smoke test.
+This demo is based on real ScopeDiff CLI output generated from a temporary git repository.
+
+Regenerate:
+
+```bash
+npm run build
+node scripts/generate-demo-assets.mjs
+```
 
 ## Story
 
@@ -55,3 +62,15 @@ scopediff diff --base main --format markdown
 
 - Markdown: `docs/demo/scopediff-report.md`
 - JSON: `docs/demo/scopediff-report.json`
+- Feature overview image: `docs/demo/assets/feature-overview.svg`
+- Feature overview PNG: `docs/demo/assets/feature-overview.png`
+- Quick start image: `docs/demo/assets/quick-start.svg`
+- Quick start PNG: `docs/demo/assets/quick-start.png`
+- Terminal diff screenshot: `docs/demo/assets/scopediff-diff-report.svg`
+- Terminal diff screenshot PNG: `docs/demo/assets/scopediff-diff-report.png`
+- Finding explain screenshot: `docs/demo/assets/scopediff-explain.svg`
+- Finding explain screenshot PNG: `docs/demo/assets/scopediff-explain.png`
+- GitHub Step Summary layout mock: `docs/demo/assets/github-step-summary-mock.svg`
+- GitHub Step Summary layout mock PNG: `docs/demo/assets/github-step-summary-mock.png`
+- Social preview image: `docs/demo/assets/social-preview.svg`
+- Social preview image PNG: `docs/demo/assets/social-preview.png`

@@ -6,6 +6,8 @@ Uma CLI para revisar mudanças de permissões e superfície de ferramentas de AI
 
 O [README em inglês](../../README.md) é a fonte de verdade para comportamento, limitações e status de release. Esta página é um resumo em português do Brasil.
 
+![Visão geral visual do ScopeDiff](../demo/assets/feature-overview.png)
+
 ## O Que Ele Ajuda A Revisar
 
 ScopeDiff ajuda mantenedores a perceber mudanças como:
@@ -19,29 +21,33 @@ ScopeDiff é uma ajuda para revisão. Ele não é uma auditoria de segurança co
 
 ## Início Rápido
 
+![Comandos de início rápido do ScopeDiff](../demo/assets/quick-start.png)
+
 ```bash
-npx scopediff scan
+npx scopediff@latest scan
 ```
 
 Comparar a branch atual com `main`:
 
 ```bash
-npx scopediff diff --base main
+npx scopediff@latest diff --base main
 ```
 
 Gerar um relatório Markdown:
 
 ```bash
-npx scopediff report --format markdown
+npx scopediff@latest report --format markdown
 ```
 
 Rodar no CI e falhar em findings de alto risco:
 
 ```bash
-npx scopediff ci --fail-on high
+npx scopediff@latest ci --fail-on high
 ```
 
 ## Exemplo De Relatório
+
+![Captura do relatório diff do ScopeDiff](../demo/assets/scopediff-diff-report.png)
 
 ```md
 ## ScopeDiff Report

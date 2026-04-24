@@ -6,6 +6,8 @@ AI agent の権限とツール境界の変更をレビューしやすくする C
 
 [English README](../../README.md) is the source of truth for behavior, limitations, and release status. This page is a Japanese summary for discoverability.
 
+![ScopeDiff feature overview](../demo/assets/feature-overview.png)
+
 ## What It Helps Review
 
 ScopeDiff helps maintainers notice changes such as:
@@ -19,29 +21,33 @@ ScopeDiff is a review aid. It is not a complete security audit, vulnerability sc
 
 ## Quick Start
 
+![ScopeDiff quick start commands](../demo/assets/quick-start.png)
+
 ```bash
-npx scopediff scan
+npx scopediff@latest scan
 ```
 
 Compare the current branch with `main`:
 
 ```bash
-npx scopediff diff --base main
+npx scopediff@latest diff --base main
 ```
 
 Generate a Markdown report:
 
 ```bash
-npx scopediff report --format markdown
+npx scopediff@latest report --format markdown
 ```
 
 Run in CI and fail on high-risk findings:
 
 ```bash
-npx scopediff ci --fail-on high
+npx scopediff@latest ci --fail-on high
 ```
 
 ## Example Report
+
+![ScopeDiff diff report screenshot](../demo/assets/scopediff-diff-report.png)
 
 ```md
 ## ScopeDiff Report

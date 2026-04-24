@@ -6,6 +6,8 @@ Ein CLI-Werkzeug, um Änderungen an Berechtigungen und Tooling-Oberflächen von 
 
 Das [englische README](../../README.md) ist die maßgebliche Quelle für Verhalten, Grenzen und Release-Status. Diese Seite ist eine deutsche Zusammenfassung.
 
+![Visuelle Übersicht von ScopeDiff](../demo/assets/feature-overview.png)
+
 ## Was ScopeDiff Sichtbar Macht
 
 ScopeDiff hilft Maintainerinnen und Maintainern, Änderungen wie diese zu erkennen:
@@ -19,29 +21,33 @@ ScopeDiff ist eine Review-Hilfe. Es ist kein vollständiges Security Audit, kein
 
 ## Quick Start
 
+![ScopeDiff Quick-Start-Befehle](../demo/assets/quick-start.png)
+
 ```bash
-npx scopediff scan
+npx scopediff@latest scan
 ```
 
 Aktuellen Branch mit `main` vergleichen:
 
 ```bash
-npx scopediff diff --base main
+npx scopediff@latest diff --base main
 ```
 
 Markdown-Report erzeugen:
 
 ```bash
-npx scopediff report --format markdown
+npx scopediff@latest report --format markdown
 ```
 
 Im CI bei High-Risk-Findings fehlschlagen:
 
 ```bash
-npx scopediff ci --fail-on high
+npx scopediff@latest ci --fail-on high
 ```
 
 ## Beispielreport
+
+![Screenshot des ScopeDiff-Diff-Reports](../demo/assets/scopediff-diff-report.png)
 
 ```md
 ## ScopeDiff Report
