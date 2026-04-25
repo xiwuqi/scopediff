@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "docs": {
+      "command": "uvx",
+      "args": ["mcp-server-fetch@1.2.3"],
+      "env": {
+        "DOCS_BASE_URL": "https://docs.example.invalid"
+      }
+    }
+  }
+}

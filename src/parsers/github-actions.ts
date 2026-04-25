@@ -16,7 +16,10 @@ export function parseWorkflow(file: string, content: string | null): WorkflowInf
 
   return {
     data: parsed.value,
-    permissions: normalizePermissions(parsed.value.permissions),
+    permissions: {
+      ...normalizePermissions(parsed.value.permissions),
+      ...normalizeJobPermissions(parsed.value.jobs)
+    },
     triggers: normalizeTriggers(parsed.value.on),
     errors: parsed.errors
   };
@@ -41,6 +44,26 @@ export function normalizePermissions(value: unknown): Record<string, string> {
       String(permission)
     ])
   );
+}
+
+function normalizeJobPermissions(value: unknown): Record<string, string> {
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    return {};
+  }
+
+  const permissions: Record<string, string> = {};
+  for (const [jobId, rawJob] of Object.entries(value as Record<string, unknown>)) {
+    if (!rawJob || typeof rawJob !== "object" || Array.isArray(rawJob)) {
+      continue;
+    }
+
+    const jobPermissions = normalizePermissions((rawJob as Record<string, unknown>).permissions);
+    for (const [scope, permission] of Object.entries(jobPermissions)) {
+      permissions[`jobs.${jobId}.${scope}`] = permission;
+    }
+  }
+
+  return permissions;
 }
 
 export function normalizeTriggers(value: unknown): string[] {

@@ -41,7 +41,7 @@ export function analyzeWorkflows(files: FileSnapshot[]): {
             currentValue: currentPermission,
             confidence: 0.95,
             isPermissionExpansion: true,
-            lineNeedle: scope
+            lineNeedle: lineNeedleForPermissionScope(scope)
           })
         );
       }
@@ -158,4 +158,8 @@ function permissionRank(permission: string): number {
     return 1;
   }
   return permissionOrder[normalized] ?? 0;
+}
+
+function lineNeedleForPermissionScope(scope: string): string {
+  return scope.split(".").at(-1) ?? scope;
 }

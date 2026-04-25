@@ -1,6 +1,11 @@
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 import { analyzeInput } from "../src/core/analyze.js";
 import type { FileSnapshot } from "../src/core/types.js";
+
+const fixturesRoot = path.join(path.dirname(fileURLToPath(import.meta.url)), "fixtures");
 
 function reportFor(files: FileSnapshot[]) {
   return analyzeInput({
@@ -56,6 +61,23 @@ describe("ScopeDiff rules", () => {
     expect(ruleIds(report)).toContain("R003");
   });
 
+  it("detects Cursor MCP config shape without flagging pinned uvx packages as unpinned", () => {
+    const report = reportFor([
+      {
+        path: ".cursor/mcp.json",
+        before: fixture("mcp/cursor-before.json"),
+        after: fixture("mcp/cursor-after.json")
+      }
+    ]);
+
+    const rules = ruleIds(report);
+    expect(rules).toEqual(expect.arrayContaining(["R001", "R004", "R006"]));
+    expect(rules).not.toContain("R007");
+    expect(report.findings.some((finding) => finding.title === "MCP server added: docs")).toBe(
+      true
+    );
+  });
+
   it("detects GitHub Actions permission, trigger, secret, and action pinning changes", () => {
     const report = reportFor([
       {
@@ -82,6 +104,61 @@ describe("ScopeDiff rules", () => {
       expect.arrayContaining(["R012", "R013", "R014", "R015", "R017"])
     );
     expect(report.riskLevel).toBe("critical");
+  });
+
+  it("detects read-all to write-all workflow permission expansion", () => {
+    const report = reportFor([
+      {
+        path: ".github/workflows/release.yml",
+        before: fixture("workflows/permissions-read-all.yml"),
+        after: fixture("workflows/permissions-write-all.yml")
+      }
+    ]);
+
+    expect(ruleIds(report)).toContain("R012");
+    expect(report.findings).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          ruleId: "R012",
+          title: "Workflow permission expanded: * write-all",
+          previousValue: "read-all",
+          currentValue: "write-all"
+        })
+      ])
+    );
+  });
+
+  it("detects job-level GitHub Actions permission expansion", () => {
+    const report = reportFor([
+      {
+        path: ".github/workflows/release.yml",
+        before: fixture("workflows/job-permissions-before.yml"),
+        after: fixture("workflows/job-permissions-after.yml")
+      }
+    ]);
+
+    expect(report.findings).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          ruleId: "R012",
+          title: "Workflow permission expanded: jobs.release.contents write",
+          previousValue: "read",
+          currentValue: "write"
+        }),
+        expect.objectContaining({
+          ruleId: "R012",
+          title: "Workflow permission expanded: jobs.release.id-token write",
+          previousValue: "none",
+          currentValue: "write"
+        }),
+        expect.objectContaining({
+          ruleId: "R012",
+          title: "Workflow permission expanded: jobs.release.packages write",
+          previousValue: "none",
+          currentValue: "write"
+        })
+      ])
+    );
   });
 
   it("detects package lifecycle and remote script execution", () => {
@@ -146,4 +223,8 @@ describe("ScopeDiff rules", () => {
 
 function ruleIds(report: { findings: Array<{ ruleId: string }> }): string[] {
   return report.findings.map((finding) => finding.ruleId);
+}
+
+function fixture(relativePath: string): string {
+  return fs.readFileSync(path.join(fixturesRoot, relativePath), "utf8");
 }

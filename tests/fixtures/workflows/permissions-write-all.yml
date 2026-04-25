@@ -1,0 +1,12 @@
+name: Release
+
+on:
+  workflow_dispatch:
+
+permissions: write-all
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm test
