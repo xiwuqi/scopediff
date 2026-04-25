@@ -1,6 +1,6 @@
 # Manual Publish Queue: v0.1.0
 
-Status: X/Twitter and LinkedIn published. Reddit r/opensource was submitted after final human confirmation, then removed by AutoModerator because the account did not meet the subreddit's 1-year age requirement. Remaining off-GitHub launch posts are queued and still require final human confirmation.
+Status: X/Twitter, LinkedIn, and Dev.to published. Reddit r/opensource was submitted after final human confirmation, then removed by AutoModerator because the account did not meet the subreddit's 1-year age requirement. Remaining off-GitHub launch posts are queued and still require final human confirmation.
 
 All external posts require a final human confirmation immediately before pressing publish/submit/post.
 
@@ -85,7 +85,16 @@ All external posts require a final human confirmation immediately before pressin
 ## Queue 5: Dev.to
 
 - Draft: `docs/launch/drafts/v0.1.0/devto-blog.md`
-- Status: prepared, not published. DEV login is required before the editor can be filled.
+- Status: published on 2026-04-24 after final human confirmation.
+- Published article:
+  - https://dev.to/xiwuqi_/reviewing-ai-agent-permission-changes-before-merge-5a0m
+- Tags used:
+  - `githubactions`
+  - `ai`
+  - `opensource`
+- Note:
+  - The planned fourth tag, `typescript`, was omitted because DEV's tag selector repeatedly selected unrelated tags during preparation.
+  - The article uses inline GitHub-hosted demo images rather than a separate uploaded cover image.
 - Optional visuals:
   - `docs/demo/assets/feature-overview.png`
   - `docs/demo/assets/scopediff-diff-report.png`
@@ -95,7 +104,7 @@ All external posts require a final human confirmation immediately before pressin
   - Keep the article educational, not promotional-only.
   - Disclose author/project relationship clearly.
   - Do not claim complete security coverage.
-  - Stop before clicking Publish.
+  - Final publish was manually approved before clicking Publish.
 
 ## Current Recommendation
 

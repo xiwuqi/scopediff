@@ -1,8 +1,8 @@
 ---
 title: "Reviewing AI Agent Permission Changes Before Merge"
-published: false
+published: true
 description: "How ScopeDiff makes MCP, agent instruction, and GitHub Actions permission changes easier to review before merging a PR."
-tags: opensource, ai, githubactions, typescript
+tags: githubactions, ai, opensource
 cover_image: https://raw.githubusercontent.com/xiwuqi/scopediff/main/docs/demo/assets/social-preview.png
 canonical_url: https://github.com/xiwuqi/scopediff
 ---

@@ -19,3 +19,4 @@ Published links are recorded only after a manual, human-approved publish action.
 | 2026-04-24 | X/Twitter         | https://x.com/HCongqi/status/2047615204809179440        | v0.1.0 visual launch thread, post 4/4.                     |
 | 2026-04-24 | LinkedIn          | https://www.linkedin.com/feed/update/urn:li:ugcPost:7453392377748279296/ | v0.1.0 visual launch post; images used: social preview, diff report, GitHub summary mock, quick start. |
 | 2026-04-24 | Reddit r/opensource | https://www.reddit.com/r/opensource/comments/1sucp99/i_built_scopediff_a_local_cli_for_reviewing_ai/ | Submitted after manual approval; AutoModerator removed it because the Reddit account is under the subreddit's 1-year account-age requirement. |
+| 2026-04-24 | Dev.to            | https://dev.to/xiwuqi_/reviewing-ai-agent-permission-changes-before-merge-5a0m | Published technical article after manual approval; tags used: githubactions, ai, opensource. |

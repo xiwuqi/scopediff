@@ -1,13 +1,15 @@
 # Dev.to and Show HN Publish Checklist: v0.1.0
 
-Status: prepared, not published.
+Status: Dev.to published. Show HN prepared, not submitted.
 
 ## Dev.to
 
 - Draft: `docs/launch/drafts/v0.1.0/devto-blog.md`
+- Published article: https://dev.to/xiwuqi_/reviewing-ai-agent-permission-changes-before-merge-5a0m
 - Intended title: `Reviewing AI Agent Permission Changes Before Merge`
-- Intended tags: `opensource`, `ai`, `githubactions`, `typescript`
-- Cover image: `https://raw.githubusercontent.com/xiwuqi/scopediff/main/docs/demo/assets/social-preview.png`
+- Published tags: `githubactions`, `ai`, `opensource`
+- Planned but omitted tag: `typescript`
+- Cover image status: not uploaded; the article uses inline GitHub-hosted demo images.
 - Supporting images:
   - `https://raw.githubusercontent.com/xiwuqi/scopediff/main/docs/demo/assets/feature-overview.png`
   - `https://raw.githubusercontent.com/xiwuqi/scopediff/main/docs/demo/assets/scopediff-diff-report.png`
@@ -18,10 +20,9 @@ Status: prepared, not published.
   - Clearly disclose author relationship to ScopeDiff.
   - Clearly state ScopeDiff is a review aid, not a complete security audit.
   - Include AI assistance disclosure because the post draft was prepared with an AI coding assistant.
-  - Do not publish without final human confirmation.
+  - Published only after final human confirmation.
 - Current browser state:
-  - `https://dev.to/new` redirects to DEV login.
-  - Login or OAuth authorization still requires user action or explicit approval.
+  - Article is public at the URL above.
 
 ## Hacker News Show HN
 
