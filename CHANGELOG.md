@@ -1,6 +1,10 @@
 # Changelog
 
-## 0.1.1 - Draft
+## 0.1.2 - Draft
+
+- Fixed `scopediff --version` so the CLI reads the package version from `package.json` instead of a hardcoded value.
+
+## 0.1.1 - 2026-04-25
 
 - Improved first-run documentation with clearer README review guidance.
 - Added common false-positive documentation and a sanitized reporting template.

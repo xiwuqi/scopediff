@@ -1,3 +1,4 @@
+import { createRequire } from "node:module";
 import { Command } from "commander";
 import { runCiCommand } from "./commands/ci.js";
 import { runDiffCommand } from "./commands/diff.js";
@@ -5,12 +6,14 @@ import { runExplainCommand } from "./commands/explain.js";
 import { runReportCommand } from "./commands/report.js";
 import { runScanCommand } from "./commands/scan.js";
 
+const require = createRequire(import.meta.url);
+const packageJson = require("../package.json") as { version: string };
 const program = new Command();
 
 program
   .name("scopediff")
   .description("Review AI agent and tooling permission changes before merge.")
-  .version("0.1.0");
+  .version(packageJson.version);
 
 program
   .command("scan")
