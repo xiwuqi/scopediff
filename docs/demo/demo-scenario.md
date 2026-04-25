@@ -22,6 +22,19 @@ A pull request adds a GitHub MCP server and also changes GitHub Actions permissi
 
 ScopeDiff does not decide whether the PR is malicious. It gives the reviewer a short, evidence-based report.
 
+## How To Read The Demo
+
+The demo intentionally contains overlapping findings. For example, the new GitHub MCP server creates one finding for the added server, another for the executable command, and another for the `GITHUB_TOKEN` environment variable.
+
+That overlap is useful during review because each finding asks a different question:
+
+- Is the new MCP server needed?
+- Is the command trusted and pinned?
+- Is the token scoped safely?
+- Did the workflow also gain write permissions?
+
+If a finding is expected in your repository, document why it is expected instead of treating ScopeDiff as a blocking verdict. For noisy cases, see [Common false positives](../common-false-positives.md).
+
 ## Before
 
 ```yaml

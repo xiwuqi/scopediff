@@ -49,6 +49,8 @@ npx scopediff@latest ci --fail-on high
 
 ![ScopeDiff diff 报告截图](../demo/assets/scopediff-diff-report.png)
 
+这个示例来自真实 CLI 输出。示例 PR 新增 GitHub MCP server、使用 `GITHUB_TOKEN`、未 pin `npx` 包，并扩大 GitHub Actions 权限。ScopeDiff 不判断 PR 是否恶意，只把证据和审查问题摆出来。
+
 ```md
 ## ScopeDiff Report
 
@@ -68,6 +70,15 @@ Review notes:
 - Document why this server is needed
 - Check whether this PR also changed workflow permissions
 ```
+
+## 如何处理 findings
+
+- 先看 evidence、file 和 line。
+- 在 `diff` 模式下对比 previous/current。
+- 判断这个能力变化是否是预期、是否有文档说明。
+- 优先使用最小权限 token、固定版本、受限 workflow permissions。
+- 自然语言 instruction finding 可能偏保守；请结合上下文判断。
+- 常见误报和上报方式见 [Common false positives](../common-false-positives.md)。
 
 ## 适合谁
 

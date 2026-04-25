@@ -49,6 +49,8 @@ npx scopediff@latest ci --fail-on high
 
 ![Capture du rapport diff ScopeDiff](../demo/assets/scopediff-diff-report.png)
 
+Cet exemple vient d'une vraie sortie CLI. La PR de demo ajoute un MCP server GitHub, utilise `GITHUB_TOKEN`, lance un package `npx` non pinne et elargit les permissions GitHub Actions. ScopeDiff ne decide pas si la PR est malveillante ; il montre des preuves et des questions de revue.
+
 ```md
 ## ScopeDiff Report
 
@@ -68,6 +70,15 @@ Review notes:
 - Document why this server is needed
 - Check whether this PR also changed workflow permissions
 ```
+
+## Comment Traiter Les Findings
+
+- Regardez d'abord evidence, file et line.
+- En mode `diff`, comparez previous/current.
+- Decidez si le changement de capacite est voulu et documente.
+- Preferez des tokens a privilege minimal, des versions pinnees et des permissions workflow bornees.
+- Les findings d'instructions en langage naturel peuvent etre conservateurs ; lisez le contexte autour.
+- Consultez [Common false positives](../common-false-positives.md) pour les cas bruyants et la facon de les signaler.
 
 ## Pour Qui
 

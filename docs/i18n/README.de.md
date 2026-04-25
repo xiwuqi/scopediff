@@ -49,6 +49,8 @@ npx scopediff@latest ci --fail-on high
 
 ![Screenshot des ScopeDiff-Diff-Reports](../demo/assets/scopediff-diff-report.png)
 
+Dieses Beispiel stammt aus echter CLI-Ausgabe. Der Demo-PR fuegt einen GitHub MCP server hinzu, nutzt `GITHUB_TOKEN`, startet ein nicht gepinntes `npx`-Paket und erweitert GitHub Actions permissions. ScopeDiff entscheidet nicht, ob der PR boesartig ist; es zeigt Evidenz und Review-Fragen.
+
 ```md
 ## ScopeDiff Report
 
@@ -68,6 +70,15 @@ Review notes:
 - Document why this server is needed
 - Check whether this PR also changed workflow permissions
 ```
+
+## Umgang Mit Findings
+
+- Pruefe zuerst evidence, file und line.
+- Vergleiche im `diff`-Modus previous/current.
+- Entscheide, ob die Capability-Aenderung beabsichtigt und dokumentiert ist.
+- Bevorzuge Least-Privilege-Tokens, gepinnte Versionen und begrenzte Workflow-Permissions.
+- Natural-language instruction findings koennen konservativ sein; lies den umgebenden Kontext.
+- Siehe [Common false positives](../common-false-positives.md) fuer rauschanfaellige Faelle und Reporting-Hinweise.
 
 ## Passt Gut Für
 

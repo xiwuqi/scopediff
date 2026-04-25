@@ -82,25 +82,43 @@ npx scopediff@latest ci --fail-on high
 
 This screenshot is generated from real ScopeDiff CLI output against a temporary demo repository. The full demo report is available in [docs/demo/scopediff-report.md](docs/demo/scopediff-report.md).
 
+The demo PR adds a GitHub MCP server, requests `GITHUB_TOKEN`, uses an unpinned `npx` package, and expands GitHub Actions permissions. ScopeDiff does not decide whether that PR is malicious. It gives reviewers evidence and concrete questions to ask.
+
 ```md
 ## ScopeDiff Report
 
 Risk: High
 
-New agent capability detected:
+Findings:
 
-- MCP server added: github
-- Command: npx -y @modelcontextprotocol/server-github
-- Env required: GITHUB_TOKEN
-- Possible scope: repository read/write depending on token permissions
+F004 - MCP server added: github
+Severity: High
+File: .mcp.json:3
+Evidence: mcpServers.github.command = npx
 
-Review notes:
+F007 - Workflow permission expanded: contents write
+Severity: High
+File: .github/workflows/ci.yml:5
+Previous: read
+Current: write
 
-- Pin package version instead of using latest
-- Prefer a read-only token for first setup
-- Document why this server is needed
-- Check whether this PR also changed workflow permissions
+Next review actions:
+
+1. Confirm why the GitHub MCP server is needed.
+2. Pin remote packages where practical.
+3. Check token scope, workflow triggers, and write permissions.
 ```
+
+## How To Review Findings
+
+ScopeDiff findings are prompts for human review, not proof of a vulnerability.
+
+- Check the evidence, file, and line range first.
+- Compare `previousValue` and `currentValue` when running `diff`.
+- Decide whether the capability change is intended and documented.
+- Prefer least-privilege tokens, pinned packages, and bounded workflow permissions.
+- Treat low-confidence natural-language instruction findings as conservative signals.
+- Report noisy results with a small sanitized example; see [Common false positives](docs/common-false-positives.md).
 
 ## What ScopeDiff Looks For
 
@@ -197,6 +215,7 @@ ScopeDiff is local-first:
 - [Architecture](docs/architecture.md)
 - [MVP acceptance](docs/mvp-acceptance.md)
 - [Test plan](docs/test-plan.md)
+- [Common false positives](docs/common-false-positives.md)
 
 ## Translations
 
