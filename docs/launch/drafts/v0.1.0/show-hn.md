@@ -1,5 +1,9 @@
 # Hacker News Show HN Draft
 
+Status: attempted on 2026-04-24 after final human confirmation, not published.
+
+Result: HN redirected to `https://news.ycombinator.com/showlim`, which says Show HNs are temporarily restricted for users not yet familiar with the site or its culture. Do not bypass, resubmit as a normal post, or repeatedly retry.
+
 Title:
 
 ```text

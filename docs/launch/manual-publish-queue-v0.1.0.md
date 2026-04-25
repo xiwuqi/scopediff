@@ -50,7 +50,16 @@ All external posts require a final human confirmation immediately before pressin
 
 - Draft: `docs/launch/drafts/v0.1.0/show-hn.md`
 - Suggested title: `Show HN: ScopeDiff - review AI agent permission changes before merge`
-- Status: prepared, not submitted.
+- Status: attempted on 2026-04-24 after final human confirmation, not published.
+- Result:
+  - HN redirected to `https://news.ycombinator.com/showlim`.
+  - Message said Show HNs are temporarily restricted because of a massive influx, mostly from users not yet familiar with the site or its culture.
+  - HN advised spending time getting to know the community before occasionally posting a Show HN.
+- Follow-up:
+  - Do not bypass the restriction.
+  - Do not resubmit as a normal non-Show post.
+  - Do not delete/retry repeatedly.
+  - Revisit only after normal community participation and when the account is better established.
 - Manual checks:
   - Read current Hacker News guidelines first: https://news.ycombinator.com/newsguidelines.html
   - Keep the title plain and non-clickbait.
