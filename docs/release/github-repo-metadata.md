@@ -39,11 +39,11 @@ ScopeDiff helps maintainers review PRs that change AI agent, MCP, workflow, pack
 This PR gives your AI agent new powers. Review them before merge.
 ```
 
-## Social Preview Image Prompt
+## Social Preview Image
 
-```text
-A clean developer-tool social preview for "ScopeDiff". Dark terminal window on the left with a concise report: "Risk: High", "MCP server added", "Workflow permission expanded". On the right, a simple diff icon and the tagline "Review agent permissions before merge." Professional, minimal, high contrast, no fear-based imagery, no locks or hacker cliches.
-```
+Recommended image: `docs/brand/social-preview-v2.png`
+
+This image uses a generated text-free background with deterministic SVG text overlay. It does not include fake metrics, endorsements, or security guarantees.
 
 ## Discussions
 

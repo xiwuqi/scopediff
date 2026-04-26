@@ -4,8 +4,8 @@ Status: prepared only. Do not publish without final human confirmation.
 
 Recommended images, in order:
 
-1. `docs/demo/assets/social-preview.png`
-2. `docs/demo/assets/feature-overview.png`
+1. `docs/brand/social-preview-v2.png`
+2. `docs/brand/docs-permission-map.png`
 3. `docs/demo/assets/scopediff-diff-report.png`
 
 ## Post Text
@@ -54,6 +54,6 @@ If this is useful, feedback or a star helps more maintainers find it.
 
 ## Alt Text
 
-1. ScopeDiff social preview showing the tagline: Review AI agent permissions before merge.
-2. ScopeDiff feature overview showing MCP changes, workflow permissions, review evidence, and local-first defaults.
+1. ScopeDiff social preview saying: This PR gives your AI agent new powers. Review them before merge.
+2. ScopeDiff permission surface map showing MCP servers, agent instructions, workflow permissions, package scripts, and Docker settings.
 3. Terminal screenshot of ScopeDiff reporting new MCP and GitHub Actions permission findings.

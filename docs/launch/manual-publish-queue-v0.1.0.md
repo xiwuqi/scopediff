@@ -20,6 +20,9 @@ All external posts require a final human confirmation immediately before pressin
   - `docs/demo/assets/scopediff-diff-report.png`
   - `docs/demo/assets/github-step-summary-mock.png`
   - `docs/demo/assets/quick-start.png`
+- Future refreshed visuals:
+  - `docs/brand/social-preview-v2.png`
+  - `docs/brand/docs-permission-map.png`
 - Suggested timing: first off-GitHub short launch post.
 - Manual checks:
   - Confirmed the post was from the project author.
@@ -39,6 +42,9 @@ All external posts require a final human confirmation immediately before pressin
   - `docs/demo/assets/scopediff-diff-report.png`
   - `docs/demo/assets/github-step-summary-mock.png`
   - `docs/demo/assets/quick-start.png`
+- Future refreshed visuals:
+  - `docs/brand/social-preview-v2.png`
+  - `docs/brand/docs-permission-map.png`
 - Suggested timing: after or alongside X/Twitter.
 - Manual checks:
   - Confirmed the tone was educational and transparent.
@@ -105,7 +111,9 @@ All external posts require a final human confirmation immediately before pressin
   - The planned fourth tag, `typescript`, was omitted because DEV's tag selector repeatedly selected unrelated tags during preparation.
   - The article uses inline GitHub-hosted demo images rather than a separate uploaded cover image.
 - Optional visuals:
-  - `docs/demo/assets/feature-overview.png`
+  - `docs/brand/blog-cover-v0.1.2.png`
+  - `docs/brand/readme-hero.png`
+  - `docs/brand/docs-permission-map.png`
   - `docs/demo/assets/scopediff-diff-report.png`
   - `docs/demo/assets/github-step-summary-mock.png`
 - Manual checks:

@@ -77,6 +77,12 @@ scopediff diff --base main --format markdown
 - JSON: `docs/demo/scopediff-report.json`
 - Feature overview image: `docs/demo/assets/feature-overview.svg`
 - Feature overview PNG: `docs/demo/assets/feature-overview.png`
+- README hero image: `docs/brand/readme-hero.svg`
+- README hero PNG: `docs/brand/readme-hero.png`
+- Permission surface map image: `docs/brand/docs-permission-map.svg`
+- Permission surface map PNG: `docs/brand/docs-permission-map.png`
+- Social preview v2 image: `docs/brand/social-preview-v2.svg`
+- Social preview v2 PNG: `docs/brand/social-preview-v2.png`
 - Quick start image: `docs/demo/assets/quick-start.svg`
 - Quick start PNG: `docs/demo/assets/quick-start.png`
 - Terminal diff screenshot: `docs/demo/assets/scopediff-diff-report.svg`

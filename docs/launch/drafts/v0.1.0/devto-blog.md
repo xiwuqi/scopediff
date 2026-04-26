@@ -3,7 +3,7 @@ title: "Reviewing AI Agent Permission Changes Before Merge"
 published: true
 description: "How ScopeDiff makes MCP, agent instruction, and GitHub Actions permission changes easier to review before merging a PR."
 tags: githubactions, ai, opensource
-cover_image: https://raw.githubusercontent.com/xiwuqi/scopediff/main/docs/demo/assets/social-preview.png
+cover_image: https://raw.githubusercontent.com/xiwuqi/scopediff/main/docs/brand/blog-cover-v0.1.2.png
 canonical_url: https://github.com/xiwuqi/scopediff
 ---
 
@@ -17,7 +17,7 @@ I built [ScopeDiff](https://github.com/xiwuqi/scopediff) as a small local CLI to
 
 ScopeDiff is a review aid, not a complete security audit. It does not claim to prevent every AI agent or MCP risk. The goal is simpler: make permission and tooling changes easier to notice during ordinary PR review.
 
-![ScopeDiff overview showing the tagline: Review AI agent and workflow permission changes before merge.](https://raw.githubusercontent.com/xiwuqi/scopediff/main/docs/demo/assets/feature-overview.png)
+![ScopeDiff overview showing a local-first CLI for reviewing AI agent and workflow permission changes.](https://raw.githubusercontent.com/xiwuqi/scopediff/main/docs/brand/readme-hero.png)
 
 ## The problem
 

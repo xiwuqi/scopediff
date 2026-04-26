@@ -1,0 +1,32 @@
+{
+  "generatedAt": "2026-04-26T04:06:53.833Z",
+  "note": "Final assets combine generated, text-free background images with deterministic SVG text overlays.",
+  "sourceImages": [
+    {
+      "path": "docs/brand/generated/gpt-scope-boundary-dark.png",
+      "role": "Dark AI agent permission boundary background"
+    },
+    {
+      "path": "docs/brand/generated/gpt-permission-map-light.png",
+      "role": "Light documentation permission-surface map background"
+    },
+    {
+      "path": "docs/brand/generated/gpt-product-mockup-dark.png",
+      "role": "Dark launch/blog product mockup background"
+    }
+  ],
+  "finalAssets": [
+    "docs/brand/readme-hero.svg",
+    "docs/brand/readme-hero.png",
+    "docs/brand/social-preview-v2.svg",
+    "docs/brand/social-preview-v2.png",
+    "docs/brand/blog-cover-v0.1.2.svg",
+    "docs/brand/blog-cover-v0.1.2.png",
+    "docs/brand/product-hunt-gallery-1.svg",
+    "docs/brand/product-hunt-gallery-1.png",
+    "docs/brand/docs-permission-map.svg",
+    "docs/brand/docs-permission-map.png",
+    "docs/brand/international-readme-card.svg",
+    "docs/brand/international-readme-card.png"
+  ]
+}

@@ -14,7 +14,7 @@ ScopeDiff helps maintainers spot changes to MCP servers, agent instructions, Git
 
 It is a review aid, not a complete security audit, vulnerability scanner, or runtime protection system.
 
-![ScopeDiff feature overview showing MCP, workflow, review evidence, and local-first checks](docs/demo/assets/feature-overview.png)
+![ScopeDiff visual overview showing a local-first CLI for reviewing AI agent and workflow permission changes](docs/brand/readme-hero.png)
 
 ## Why ScopeDiff
 
@@ -122,6 +122,8 @@ ScopeDiff findings are prompts for human review, not proof of a vulnerability.
 
 ## What ScopeDiff Looks For
 
+![ScopeDiff permission surface map showing MCP servers, agent instructions, workflow permissions, package scripts, and Docker settings](docs/brand/docs-permission-map.png)
+
 - MCP server additions and command/args/env changes.
 - Credential-like env names such as `GITHUB_TOKEN` or `API_KEY`.
 - Unpinned `npx`, `uvx`, `pipx`, and Docker `latest` usage.
@@ -157,7 +159,7 @@ jobs:
           node-version: 20
 
       - name: Run ScopeDiff
-        uses: xiwuqi/scopediff@v0.1.0
+        uses: xiwuqi/scopediff@v0.1.2
         with:
           base: origin/${{ github.base_ref }}
           fail-on: high
@@ -173,7 +175,7 @@ You can also run the npm package directly:
 
 ```yaml
 - name: Run ScopeDiff
-  run: npx scopediff@0.1.0 ci --base origin/${{ github.base_ref }} --fail-on high
+  run: npx scopediff@0.1.2 ci --base origin/${{ github.base_ref }} --fail-on high
 ```
 
 Pin the action tag or npm version for long-lived CI. Do not use an unpinned branch such as `main`.
@@ -216,6 +218,7 @@ ScopeDiff is local-first:
 - [MVP acceptance](docs/mvp-acceptance.md)
 - [Test plan](docs/test-plan.md)
 - [Common false positives](docs/common-false-positives.md)
+- [Visual system](docs/brand/visual-system.md)
 
 ## Translations
 

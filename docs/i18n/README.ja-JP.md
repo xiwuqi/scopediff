@@ -6,11 +6,13 @@ AI agent の権限とツール境界の変更をレビューしやすくする C
 
 [English README](../../README.md) is the source of truth for behavior, limitations, and release status. This page is a Japanese summary for discoverability.
 
-![ScopeDiff feature overview](../demo/assets/feature-overview.png)
+![ScopeDiff visual overview for a local-first agent and tooling permission review CLI](../brand/readme-hero.png)
 
 ## What It Helps Review
 
 ScopeDiff helps maintainers notice changes such as:
+
+![ScopeDiff permission surface map for MCP, agent instructions, workflow permissions, package scripts, and Docker settings](../brand/docs-permission-map.png)
 
 - Added or modified MCP servers.
 - Agent instructions, Cursor rules, Claude skills, and Copilot instructions that expand capabilities.

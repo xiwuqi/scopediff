@@ -6,11 +6,13 @@ AI agent 权限与工具面变更审查辅助工具。
 
 [English README](../../README.md) 是行为、限制和发布状态的准确信息来源。本页是面向中文开发者的摘要版。
 
-![ScopeDiff 功能概览](../demo/assets/feature-overview.png)
+![ScopeDiff 视觉概览：本地优先的 agent/tooling 权限变更审查 CLI](../brand/readme-hero.png)
 
 ## 它解决什么问题
 
 ScopeDiff 帮助维护者在合并 PR 前看到这些变化：
+
+![ScopeDiff 权限面地图：MCP、agent instructions、workflow permissions、package scripts 和 Docker 设置](../brand/docs-permission-map.png)
 
 - MCP server 新增或修改。
 - Agent instruction、Cursor rules、Claude skills、Copilot instructions 的能力边界变化。

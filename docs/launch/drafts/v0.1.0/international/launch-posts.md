@@ -2,6 +2,8 @@
 
 These are draft-only posts. Do not publish without manual review for the target community, platform rules, and local tone.
 
+Recommended visual for international posts: `docs/brand/international-readme-card.png`
+
 ## English
 
 I released ScopeDiff v0.1.0, a small CLI for reviewing AI agent and tooling permission changes before merge.

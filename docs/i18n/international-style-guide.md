@@ -7,6 +7,7 @@ ScopeDiff should sound useful, transparent, and calm in every language. It shoul
 - The English `README.md` is the source of truth for features, limitations, install commands, and release state.
 - Localized pages are summaries for discovery and onboarding.
 - If a localized page conflicts with the English README, fix the localized page.
+- Shared visuals should stay synchronized with the English README. Current international visual: `docs/brand/international-readme-card.png`.
 
 ## Translation Rules
 

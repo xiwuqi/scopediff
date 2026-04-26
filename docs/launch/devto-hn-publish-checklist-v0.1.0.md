@@ -11,7 +11,8 @@ Status: Dev.to published. Show HN attempted, not published.
 - Planned but omitted tag: `typescript`
 - Cover image status: not uploaded; the article uses inline GitHub-hosted demo images.
 - Supporting images:
-  - `https://raw.githubusercontent.com/xiwuqi/scopediff/main/docs/demo/assets/feature-overview.png`
+  - `https://raw.githubusercontent.com/xiwuqi/scopediff/main/docs/brand/readme-hero.png`
+  - `https://raw.githubusercontent.com/xiwuqi/scopediff/main/docs/brand/docs-permission-map.png`
   - `https://raw.githubusercontent.com/xiwuqi/scopediff/main/docs/demo/assets/scopediff-diff-report.png`
   - `https://raw.githubusercontent.com/xiwuqi/scopediff/main/docs/demo/assets/github-step-summary-mock.png`
 - Rule checks:

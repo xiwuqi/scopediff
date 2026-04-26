@@ -26,6 +26,8 @@ I’d love feedback from maintainers and AI-tool users, especially on false posi
 
 ## Media Needed Before Launch
 
+- Product gallery image: `docs/brand/product-hunt-gallery-1.png`.
+- Social preview image: `docs/brand/social-preview-v2.png`.
 - README first screen screenshot.
 - Terminal report screenshot.
 - Short demo GIF or 60-second video.

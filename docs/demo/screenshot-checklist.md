@@ -4,6 +4,18 @@ Use real CLI output and avoid synthetic counts.
 
 Generated assets:
 
+- `docs/brand/readme-hero.svg`
+- `docs/brand/readme-hero.png`
+- `docs/brand/social-preview-v2.svg`
+- `docs/brand/social-preview-v2.png`
+- `docs/brand/blog-cover-v0.1.2.svg`
+- `docs/brand/blog-cover-v0.1.2.png`
+- `docs/brand/product-hunt-gallery-1.svg`
+- `docs/brand/product-hunt-gallery-1.png`
+- `docs/brand/docs-permission-map.svg`
+- `docs/brand/docs-permission-map.png`
+- `docs/brand/international-readme-card.svg`
+- `docs/brand/international-readme-card.png`
 - `docs/demo/assets/scopediff-diff-report.svg`
 - `docs/demo/assets/scopediff-diff-report.png`
 - `docs/demo/assets/scopediff-explain.svg`
@@ -23,11 +35,12 @@ Regenerate with:
 ```bash
 npm run build
 node scripts/generate-demo-assets.mjs
+node scripts/generate-brand-assets.mjs
 ```
 
 1. README first screen
    - Show title, one-line description, three value bullets, and review-aid limitation.
-   - Current README includes `docs/demo/assets/feature-overview.png` near the first screen.
+   - Current README includes `docs/brand/readme-hero.png` near the first screen.
 2. CLI scan output
    - Use `docs/demo/assets/quick-start.png` for quick-start command visuals.
    - If capturing a real terminal, use a clean temporary project showing `Risk: Low`.
@@ -42,8 +55,8 @@ node scripts/generate-demo-assets.mjs
    - Show the default severity, why it matters, and suggested review.
    - Current assets: `docs/demo/assets/scopediff-explain.svg` and `docs/demo/assets/scopediff-explain.png`.
 6. Social preview
-   - Use `docs/demo/assets/social-preview.svg` as a starter visual.
-   - Use `docs/demo/assets/social-preview.png` for social uploads.
+   - Use `docs/brand/social-preview-v2.svg` as the current starter visual.
+   - Use `docs/brand/social-preview-v2.png` for social uploads.
    - Review platform size/cropping before upload.
 
 Recommended dimensions:

@@ -6,7 +6,7 @@ Status: prepared only. Do not publish without final human confirmation.
 
 Recommended images, in order:
 
-1. `docs/demo/assets/social-preview.png`
+1. `docs/brand/social-preview-v2.png`
 2. `docs/demo/assets/scopediff-diff-report.png`
 3. `docs/demo/assets/github-step-summary-mock.png`
 4. `docs/demo/assets/quick-start.png`

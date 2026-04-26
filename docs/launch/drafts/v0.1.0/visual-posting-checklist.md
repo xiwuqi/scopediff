@@ -6,9 +6,9 @@ Status: prepared only. Use before any manual social post.
 
 Recommended order:
 
-1. `docs/demo/assets/social-preview.png`
+1. `docs/brand/social-preview-v2.png`
    - Purpose: first-frame context and project identity.
-   - Source: generated project social preview.
+   - Source: generated text-free background plus exact SVG text overlay.
    - Real/mocked: visual summary, not a metric claim.
    - Alt text: ScopeDiff social preview showing the tagline: Review AI agent permissions before merge.
 2. `docs/demo/assets/scopediff-diff-report.png`
@@ -31,9 +31,15 @@ Recommended order:
 
 Recommended order:
 
-1. `docs/demo/assets/social-preview.png`
-2. `docs/demo/assets/feature-overview.png`
+1. `docs/brand/social-preview-v2.png`
+2. `docs/brand/docs-permission-map.png`
 3. `docs/demo/assets/scopediff-diff-report.png`
+
+## Blog / Product Hunt Images
+
+- Blog cover: `docs/brand/blog-cover-v0.1.2.png`
+- Product Hunt first gallery image: `docs/brand/product-hunt-gallery-1.png`
+- International post card: `docs/brand/international-readme-card.png`
 
 ## Checks Before Posting
 

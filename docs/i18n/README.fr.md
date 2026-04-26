@@ -6,11 +6,13 @@ Un outil CLI pour revoir les changements de permissions et de surface d'outillag
 
 Le [README anglais](../../README.md) reste la source de vérité pour le comportement, les limites et l'état des releases. Cette page est un résumé en français.
 
-![Vue d'ensemble visuelle de ScopeDiff](../demo/assets/feature-overview.png)
+![Vue d'ensemble visuelle de ScopeDiff comme CLI locale pour revoir les changements de permissions d'agents et d'outillage](../brand/readme-hero.png)
 
 ## Ce Que ScopeDiff Aide A Voir
 
 ScopeDiff aide les mainteneurs à repérer des changements comme :
+
+![Carte de surface de permissions ScopeDiff pour MCP, instructions d'agents, permissions de workflows, scripts de package et Docker](../brand/docs-permission-map.png)
 
 - Ajout ou modification de MCP servers.
 - Instructions d'agents, Cursor rules, Claude skills ou Copilot instructions qui élargissent les capacités.

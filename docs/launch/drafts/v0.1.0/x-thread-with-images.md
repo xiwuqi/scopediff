@@ -20,6 +20,11 @@ Recommended images:
 - `docs/demo/assets/github-step-summary-mock.png`
 - `docs/demo/assets/quick-start.png`
 
+Future visual refresh:
+
+- `docs/brand/social-preview-v2.png`
+- `docs/brand/docs-permission-map.png`
+
 ```text
 Built ScopeDiff because AI PRs now change more than code.
 
