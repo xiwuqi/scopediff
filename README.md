@@ -85,28 +85,60 @@ This screenshot is generated from real ScopeDiff CLI output against a temporary 
 The demo PR adds a GitHub MCP server, requests `GITHUB_TOKEN`, uses an unpinned `npx` package, and expands GitHub Actions permissions. ScopeDiff does not decide whether that PR is malicious. It gives reviewers evidence and concrete questions to ask.
 
 ```md
-## ScopeDiff Report
+# ScopeDiff Report
+
+Repo: scopediff-demo
+Base: main
+Head: HEAD
+Generated: 2026-04-24T07:16:57.607Z
+
+## Summary
 
 Risk: High
 
-Findings:
+ScopeDiff found 3 review-worthy agent/tooling changes. Highest risk: high.
 
-F004 - MCP server added: github
+Counts:
+
+- Critical: 0
+- High: 2
+- Medium: 1
+- Low: 0
+
+## Findings
+
+### F004 - MCP server added: github
+
 Severity: High
-File: .mcp.json:3
+Category: mcp
+File: `.mcp.json:3`
+Rule: R001
+Confidence: 0.95
 Evidence: mcpServers.github.command = npx
+Why it matters: MCP servers expose tools that agents can call.
+Suggested review: Confirm the server is needed, trusted, and least-privileged.
 
-F007 - Workflow permission expanded: contents write
+### F007 - Workflow permission expanded: contents write
+
 Severity: High
-File: .github/workflows/ci.yml:5
+Category: workflow
+File: `.github/workflows/ci.yml:5`
+Rule: R012
+Confidence: 0.95
 Previous: read
 Current: write
+Why it matters: Expanded permissions can increase automation blast radius.
+Suggested review: Confirm the workflow needs write access and uses safe triggers.
 
-Next review actions:
+## Next Review Actions
 
 1. Confirm why the GitHub MCP server is needed.
 2. Pin remote packages where practical.
 3. Check token scope, workflow triggers, and write permissions.
+
+## Limitations
+
+ScopeDiff is an audit aid. It does not execute tools, verify package reputation, or prove whether a change is malicious.
 ```
 
 ## How To Review Findings
